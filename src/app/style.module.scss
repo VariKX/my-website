@@ -1,0 +1,29 @@
+@import './style/variables.scss';
+
+.page-404 {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  &__content {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__caption {
+    font-weight: 900;
+    font-size: 160px;
+  }
+
+  &__text {
+    font-weight: 600;
+  }
+
+  &__link {
+    color: $first-color;
+  }
+}

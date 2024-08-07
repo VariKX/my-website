@@ -1,0 +1,30 @@
+.info {
+  &__caption {
+    margin-bottom: 60px;
+  }
+
+  section {
+    margin-top: 200px;
+  }
+
+  &__road {
+    width: 70%;
+    margin-left: auto;
+  }
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__photo {
+    border-radius: 20px;
+    width: 450px;
+    height: 450px;
+  }
+
+  &__box {
+    width: 50%;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../app/style/variables.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    width: 70px;
+    height: 50px;
+  }
+}
+
+@mixin after-block($color) {
+  content: '';
+  display: block;
+  width: 100%;
+  background-color: $color;
+  height: 3px;
+  margin-top: 8px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+
+  &__element {
+    color: red;
+
+    &:hover::after {
+      @include after-block($second-color);
+    }
+
+    &_active {
+      &:hover::after,
+      &::after { 
+        @include after-block($first-color);
+      }
+    }
+  }
+}
