@@ -1,0 +1,22 @@
+@import '@/app/style/variables.scss';
+
+.study {
+  display: flex;
+  gap: 20px;
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__duration {
+    font-size: $small-text-size;
+  }
+
+  &__photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+  }
+}

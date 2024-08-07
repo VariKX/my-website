@@ -1,0 +1,11 @@
+@import '@/app/style/variables.scss';
+
+.stack-element {
+  padding: 8px 16px;
+  background-color: lighten($dark-color, 25);
+  border-radius: 20px;
+  
+  &__name {
+    color: $light-color;
+  }
+}

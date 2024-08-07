@@ -3,9 +3,10 @@ import style from './style.module.scss';
 import cn from 'classnames';
 import Image from 'next/image';
 import MyPhoto from './assets/myphoto.jpg';
-import { workingRoadData } from './constants';
+import { studingRoadData, workingRoadData } from './constants';
 import Company from './components/Company';
-import { CompanyRoadType } from './types';
+import type { CompanyRoadType, StudingRoadType } from '@/types';
+import Study from './components/Study';
 
 const Info: React.FC = () => {
   
@@ -19,9 +20,13 @@ const Info: React.FC = () => {
         <Image className={style['about__photo']} alt='myphoto' src={MyPhoto}/>
       </section>
       <section className={style['info__road']}>
-        {workingRoadData.map((data: CompanyRoadType) => <Company data={data} key={data.id}/>)}
+        <h2 className={style['info__caption']}>Опыт работы</h2>
+        {workingRoadData.map((data: CompanyRoadType) => <Company {...data} key={data.id}/>)}
       </section>
-      <section className={style['info__road']}></section>
+      <section className={style['info__road']}>
+        <h2 className={style['info__caption']}>Образование</h2>
+        {studingRoadData.map((study: StudingRoadType) => <Study {...study} key={study.id}/>)}
+      </section>
     </main>
   );
 };

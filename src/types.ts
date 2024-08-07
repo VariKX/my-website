@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-interface RoadStandartType {
+export type RoadStandartType = {
   id: number;
   name: string;
   logo: StaticImageData | string; // ! убрать тип string
@@ -10,7 +10,6 @@ interface RoadStandartType {
 
 export type StackType = {
   id: number;
-  logo: StaticImageData;
   name: string;
 };
 
@@ -21,5 +20,5 @@ export interface StudingRoadType extends RoadStandartType {
 export interface CompanyRoadType extends RoadStandartType {
   position: string;
   doing: string;
-  stack: [] | [StackType], // ! убрать тип []
+  stack: StackType[];
 };
