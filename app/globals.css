@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F0F1F5;
+  --foreground: #0A0E15;
+}
+
+[data-theme='dark'] {
+  --background: #0A0E15;
+  --foreground: #F0F1F5;
+}
+
+html {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-oswald);
+  font-weight: 300;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+main {
+  min-height: calc(100vh - 64px);
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+}
