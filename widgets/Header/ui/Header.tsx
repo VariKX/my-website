@@ -1,21 +1,22 @@
-import { ThemeToggleButton } from "@/sh/ui/ThemeToggleButton";
+import { Logo } from "@/shared/ui/Logo";
+import { ThemeToggleButton } from "@/shared/ui/ThemeToggleButton";
 import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex items-center justify-between p-4 max-w-[1440px] mx-auto">
-      <div className="border border-foreground/20 px-2 py-1 rounded text-xs font-medium tracking-widest cursor-default select-none">
-        SM
+    <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-sm">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-10 flex items-center justify-between py-4">
+        <Logo /> 
+        <nav className="hidden md:block">
+          <ul className="flex gap-6 text-sm sm:text-base">
+            <li><a href="#hero" className="hover:underline">Главная</a></li>
+            <li><a href="#about" className="hover:underline">Обо мне</a></li>
+            <li><a href="#projects" className="hover:underline">Проекты</a></li>
+            <li><a href="#contact" className="hover:underline">Контакты</a></li>
+          </ul>
+        </nav>
+        <ThemeToggleButton />
       </div>
-      <nav>
-        <ul className="flex gap-4">
-          <li><a className="text-xl" href="/">Главная</a></li>
-          <li><a className="text-xl" href="/about">Обо мне</a></li>
-          <li><a className="text-xl" href="/projects">Проекты</a></li>
-          <li><a className="text-xl" href="/contact">Контакты</a></li>  
-        </ul>
-      </nav>
-      <ThemeToggleButton />
     </header>
   );
 };

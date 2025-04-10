@@ -11,6 +11,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -18,15 +19,9 @@ body {
   margin: 0;
   font-family: var(--font-oswald);
   font-weight: 300;
-  min-height: 100vh;
   background-color: var(--background);
   color: var(--foreground);
-}
-
-main {
-  min-height: calc(100vh - 64px);
-  margin: 0 auto;
-  max-width: 1440px;
+  min-height: 100vh;
 }
 
 ul {
